@@ -19,7 +19,10 @@ const AuthProviders = () => {
           </Link>
         </div>
       ) : (
-        <Skeleton variant="rounded" height={36} width={125} />
+        <>
+          <Skeleton className="max-sm:hidden" variant="rounded" height={36} width={125} />
+          <Skeleton className="sm:hidden" variant="rounded" height={36} width={36} />
+        </>
       )}
     </>
   )

@@ -10,7 +10,7 @@ const Intro = () => {
   return (
     <div className=" w-[507px] content-center max-sm:mt-[50%] lg:mb-[40px]">
       {loading == false ? (
-        <h1 className="mb-10 mt-16  text-[64px]   font-bold tracking-tight max-sm:mb-4 max-sm:text-[40px] max-sm:leading-[48px] md:text-6xl xl:text-[64px] xl:leading-[77px]">
+        <h1 className="text-[64px] font-bold  tracking-tight   max-sm:mb-4 max-sm:text-[40px] max-sm:leading-[48px] sm:mb-10 sm:mt-16 md:text-6xl xl:text-[64px] xl:leading-[77px]">
           Find a place you will love to live!
         </h1>
       ) : (

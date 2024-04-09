@@ -21,7 +21,7 @@ const Footer = () => {
     return null
   }
   return (
-    <div className="fixed bottom-10 right-3 px-16 py-4">
+    <div className="fixed bottom-5 right-3 px-7 py-4 max-sm:bottom-2 max-sm:right-0">
       {isMoonIcon ? (
         <div className="cursor-pointer rounded border p-1 transition duration-300" onClick={toggleIcon}>
           <IoMoonOutline onClick={() => setTheme("light")} />

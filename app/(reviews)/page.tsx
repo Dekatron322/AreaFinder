@@ -26,7 +26,7 @@ export default function Web() {
     <>
       <section className="">
         <Navbar />
-        <div className="paddings flex h-screen justify-between">
+        <div className="paddings flex h-screen justify-between max-sm:items-center">
           <Intro />
           <div className="mt-24 max-sm:hidden ">
             <UserReviews />

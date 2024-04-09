@@ -73,7 +73,7 @@ export default function Web() {
 
             <div className="">
               <div className="flex  content-center ">
-                <Link href="/" className="mr-3 content-center text-base font-medium">
+                <Link href="/" className="mr-3 content-center text-base font-medium max-sm:hidden">
                   Welcome!
                 </Link>
                 <Link href="/">

@@ -1,12 +1,14 @@
-# Next.js Enterprise Boilerplate
+# Area Finder
 
-![Project intro image](./project-logo.png)
+![Project intro image](./Homepage.png)
 
-Welcome to the _Next.js Enterprise Boilerplate_, an open-source template for enterprise projects! It's loaded with features that'll help you build a high-performance, maintainable, and enjoyable app. We've done all the heavy lifting for you, so sit back, relax, and get ready to conquer the world with your incredible app! 🌍
+Welcome to the Area Finder, See through the lenses of people who have
+lived or visited the neighbourhood you might
+have in mind.! 🌍
 
 <br />
-<a href="https://discord.gg/fyWtyNKmfX" style="width: 100%; display: flex; justify-content: center;">
-  <img src="https://discordapp.com/api/guilds/1111676875782234175/widget.png?style=banner2" alt="Blazity Discord Banner"/>
+<a href="#" style="width: 100%; display: flex; justify-content: center;">
+  <img src="./project.png" alt="Blazity Discord Banner"/>
 </a>
 <br />
 
@@ -40,7 +42,7 @@ With this template, you get all the awesomeness you need:
 
 ## Table of Contents
 
-- [Next.js Enterprise Boilerplate](#nextjs-enterprise-boilerplate)
+- [The Area Finder](#the-area-finder)
   - [📚 Features](#-features)
   - [Table of Contents](#table-of-contents)
   - [🎯 Getting Started](#-getting-started)
@@ -66,13 +68,13 @@ With this template, you get all the awesomeness you need:
 
 ## 🎯 Getting Started
 
-To get started with this boilerplate, follow these steps:
+To get started with this, follow these steps:
 
 1. Fork & clone repository:
 
 ```bash
 ## Don't forget to ⭐ star and fork it first :)
-git clone https://github.com/<your_username)/next-enterprise.git
+git clone https://github.com/<your_username>/AreaFinder.git
 ```
 
 2. Install the dependencies:

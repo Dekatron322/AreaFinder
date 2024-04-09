@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       {
         width: 1200,
         height: 630,
-        url: "https://www.figma.com/file/eM10DwK8Ywv8g8KXduvJOw/Area-Finder?type=design&node-id=162%3A8104&mode=design&t=cDCbMKQcIxooaThz-1",
+        url: "./Homepage.png",
       },
     ],
   },

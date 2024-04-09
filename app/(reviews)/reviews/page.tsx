@@ -100,7 +100,7 @@ export default function Web() {
             <div>
               <h5 className="text-2xl font-medium max-sm:text-base">Bonny and Clyde Street, Ajao Estate, Lagos</h5>
               <p className="text-base font-medium max-sm:my-2 max-sm:overflow-hidden max-sm:text-xs">
-                "450" <span>Reviews (People are raving about the selected location)</span>
+                &quot;450&quot; <span>Reviews (People are raving about the selected location)</span>
               </p>
             </div>
             <div className="flex gap-4 max-sm:hidden">
@@ -136,7 +136,7 @@ export default function Web() {
           </div>
         </nav>
         {showSuccessNotification && (
-          <div className="success-notification animation-fade-in absolute left-1/2 top-[195px] flex h-[50px] w-[339px] -translate-x-1/2 transform items-center justify-center gap-2 rounded-md border border-[#0F920F] bg-[#F2FDF2] text-[#0F920F] shadow-md shadow-[#05420514]">
+          <div className="success-notification animation-fade-in absolute left-1/2 top-[195px] flex h-[50px] w-[339px] -translate-x-1/2 transform items-center justify-center gap-2 rounded-md border border-[#0F920F] bg-[#F2FDF2] text-[#0F920F] shadow-[#05420514]">
             <Image src="/check-circle.svg" width={16} height={16} alt="dekalo" />
             <span className="clash-font text-sm  text-[#0F920F]">Review submitted</span>
           </div>

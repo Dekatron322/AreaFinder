@@ -73,7 +73,7 @@ const DashboardNav = () => {
         <div>
           <h5 className=" text-2xl font-medium">Bonny and Clyde Street, Ajao Estate, Lagos</h5>
           <p className=" text-base font-medium">
-            "450" <span>Reviews (People are raving about the selected location)</span>
+            &quot;450&quot; <span>Reviews (People are raving about the selected location)</span>
           </p>
         </div>
         <div className="flex gap-4">

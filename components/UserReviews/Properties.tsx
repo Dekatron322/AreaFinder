@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from "react"
-import { Property } from "utils"
+import React, { useEffect, useRef, useState } from "react"
 import { IoIosArrowForward } from "react-icons/io"
+import { Property } from "utils"
 
 const Properties: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null)

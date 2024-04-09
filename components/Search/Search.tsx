@@ -30,7 +30,7 @@ const Search = () => {
 
   return (
     <div className="relative">
-      <div className="search-bg mb-4 flex h-[50px] w-[100%] items-center justify-between gap-3  rounded   px-3 py-1  text-[#484851] hover:border-[#5378F6]  focus:border-[#5378F6] focus:bg-[#FBFAFC] max-sm:mb-2">
+      <div className="search-bg mb-4 flex h-[50px] w-[100%] items-center justify-between gap-3  rounded   px-3 py-1  hover:border-[#5378F6]  focus:border-[#5378F6] focus:bg-[#FBFAFC] max-sm:mb-2">
         <Image className="icon-style" src="./icons.svg" width={16} height={16} alt="dekalo" />
         <Image className="dark-icon-style" src="./search-dark.svg" width={16} height={16} alt="dekalo" />
         <input

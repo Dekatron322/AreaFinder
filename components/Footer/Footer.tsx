@@ -1,7 +1,9 @@
 "use client"
+import Link from "next/link"
 import { useTheme } from "next-themes"
 import React, { useEffect, useState } from "react"
 import { FiSun } from "react-icons/fi"
+import { IoMdGlobe } from "react-icons/io"
 import { IoMoonOutline } from "react-icons/io5"
 
 const Footer = () => {
@@ -21,16 +23,29 @@ const Footer = () => {
     return null
   }
   return (
-    <div className="fixed bottom-5 right-3 px-7 py-4 max-sm:bottom-2 max-sm:right-0">
-      {isMoonIcon ? (
+    <div className="mt-auto flex justify-between border-t max-md:hidden">
+      <div className="flex gap-6 px-16 py-4">
+        <Link href="/" className="text-xs font-bold">
+          Privacy Policy
+        </Link>
+        <Link href="/" className="text-xs font-bold">
+          Help Center
+        </Link>
+        <Link href="/" className="text-xs font-bold">
+          License
+        </Link>
+
+        <p className="text-xs text-[#747A80]">© 2024 All rights reserved</p>
+      </div>
+      <div className="flex items-center gap-6 px-16 py-4">
         <div className="cursor-pointer rounded border p-1 transition duration-300" onClick={toggleIcon}>
-          <IoMoonOutline onClick={() => setTheme("light")} />
+          {isMoonIcon ? (
+            <IoMoonOutline onClick={() => setTheme("light")} />
+          ) : (
+            <FiSun onClick={() => setTheme("dark")} />
+          )}
         </div>
-      ) : (
-        <div className="cursor-pointer rounded border p-1 transition duration-300" onClick={toggleIcon}>
-          <FiSun onClick={() => setTheme("dark")} />
-        </div>
-      )}
+      </div>
     </div>
   )
 }

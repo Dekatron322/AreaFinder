@@ -5,7 +5,7 @@ import Intro from "components/UserReviews/Intro"
 import Footer from "components/Footer/Footer"
 
 export const metadata: Metadata = {
-  title: "Area Finder - Find a place you will love to live!",
+  title: "Caregivers Hospital - EMR for hospital!",
   twitter: {
     card: "summary_large_image",
   },

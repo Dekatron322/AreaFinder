@@ -11,11 +11,8 @@ const AuthProviders = () => {
     <>
       {loading == false ? (
         <div className="flex  content-center ">
-          <Link href="/" className="mr-3 content-center text-base font-medium max-sm:hidden">
-            Welcome!
-          </Link>
-          <Link href="/">
-            <Image src="/avatar.svg" width={36} height={36} alt="avatar" />
+          <Link href="signup" className="mr-3 content-center text-base font-medium text-[#46FFA6] max-sm:hidden">
+            SIGN UP
           </Link>
         </div>
       ) : (

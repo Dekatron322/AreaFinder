@@ -4,7 +4,6 @@ import DashboardNav from "components/Navbar/DashboardNav"
 import Footer from "components/Footer/Footer"
 import { IoIosArrowForward } from "react-icons/io"
 import { usePathname } from "next/navigation"
-import { Skeleton } from "@mui/material"
 import Image from "next/image"
 import Link from "next/link"
 import { GoPlus } from "react-icons/go"
@@ -94,7 +93,6 @@ export default function Dashboard() {
   const handleHmoSubmissionSuccess = async () => {
     setShowSuccessNotification(true)
     setTimeout(() => setShowSuccessNotification(false), 5000)
-    // Fetch departments again to get updated data
     await fetchDepartments()
   }
 
@@ -123,7 +121,13 @@ export default function Dashboard() {
               </button>
             </div>
             {loading ? (
-              <Skeleton variant="rectangular" width={400} height={200} />
+              <div className="loading-text flex h-full items-center justify-center">
+                {"loading...".split("").map((letter, index) => (
+                  <span key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+                    {letter}
+                  </span>
+                ))}
+              </div>
             ) : (
               <div className="max-md:grid-col-1 mt-10 grid grid-cols-2 gap-4 px-16 max-md:mt-4 max-md:px-3">
                 {departments.map((department) => (

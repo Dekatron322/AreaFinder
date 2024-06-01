@@ -40,6 +40,8 @@ const Page: React.FC = () => {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [showSuccessNotification, setShowSuccessNotification] = useState(false)
+  const [showErrorNotification, setShowErrorNotification] = useState(false)
   const departments: Department[] = [
     "Admin",
     "Medical Consultants",
@@ -129,14 +131,24 @@ const Page: React.FC = () => {
       // Handle the response as needed
       console.log("Login successful:", response.data)
 
+      const userId = response.data.id
+      localStorage.setItem("id", userId.toString())
+      console.log("User ID set in localStorage:", localStorage.getItem("id")) // Log the value to confirm
+
+      
       // Redirect based on department
       if (searchTerm) {
         const route = departmentRoutes[searchTerm]
         router.push(route)
+        setShowSuccessNotification(true)
+      setTimeout(() => setShowSuccessNotification(false), 5000)
       }
     } catch (error) {
-      setError("Login failed. Please check your credentials and try again.")
+      setError("Login failed. Please try again.")
       console.error("Login error:", error)
+
+      setShowErrorNotification(true)
+      setTimeout(() => setShowErrorNotification(false), 5000)
     } finally {
       setLoading(false)
     }
@@ -231,7 +243,7 @@ const Page: React.FC = () => {
                 <p className="text-sm">Remember me</p>
               </div>
 
-              {error && <p className="text-sm text-red-500">{error}</p>}
+              
 
               <div className="flex w-full gap-6">
                 <button
@@ -258,6 +270,18 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
+      {showSuccessNotification && (
+        <div className="animation-fade-in absolute bottom-16  right-16 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#0F920F] bg-[#F2FDF2] text-[#0F920F] shadow-[#05420514]">
+        <Image src="/check-circle.svg" width={16} height={16} alt="dekalo" />
+        <span className="clash-font text-sm  text-[#0F920F]">Login Successfully</span>
+      </div>
+      )}
+      {showErrorNotification && (
+        <div className="animation-fade-in absolute bottom-16  right-16 flex h-[50px] w-[339px] transform items-center justify-center gap-2 rounded-md border border-[#D14343] bg-[#FEE5E5] text-[#D14343] shadow-[#05420514]">
+        <Image src="/check-circle-failed.svg" width={16} height={16} alt="dekalo" />
+        <span className="clash-font text-sm  text-[#D14343]">{error}</span>
+        </div>
+      )}
     </>
   )
 }
